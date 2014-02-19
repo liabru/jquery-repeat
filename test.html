@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="robots" content="noindex">
+        <title>jquery.repeat demo</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.repeat.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var $testTarget = $('.test-target');
+
+                // repeat all list items in content-box ul's, respective to their parents and ordering
+                $('.content-box ul li').repeat(2);
+
+                // finds all <p> elements under all parents, but should still respect their parents and ordering
+                // normally you'd be far more specific than this
+                $('p').repeat(2);
+
+                // example of using a target other than the parent
+                $('.content-box').repeat(3, $testTarget);
+            });
+        </script>
+        <style>
+            body {
+                background: #999;
+                padding: 20px;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+
+            h1 {
+                color: #fff;
+            }
+
+            .test-target {
+                background: #ddd; 
+                padding: 20px; 
+                margin: 20px 0;
+            }
+
+            .content-box {
+                background: #ccc;
+                padding: 20px; 
+            }
+
+            .test-parent {
+                background: #eee; 
+                padding: 20px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jquery.repeat test</h1>
+        <p>View source to see the original HTML. For info see the project on <a href="https://github.com/liabru/jquery-repeat">GitHub</a>.</p>
+        <div class="content-box">
+            <h3>Consectetur adipiscing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tristique metus vitae elit venenatis, in volutpat sem tristique.</p>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Donec nunc nulla vitae ultrices ac</li>
+            </ul>
+        </div>
+        <div class="test-parent">
+            <p>I've got a different parent, but should still repeat under my own parent</p>
+        </div>
+        <div class="test-target">
+            <h2>Fill me up buttercup</h2>
+        </div>
+    </body>
+</html>
