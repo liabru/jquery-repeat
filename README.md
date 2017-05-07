@@ -2,17 +2,11 @@
 
 [http://brm.io/jquery-repeat](http://brm.io/jquery-repeat)
 
-_Repeat_ is for filling out mock-ups, making it easy to duplicate blocks of sample content.
+For filling out mock-ups, making it easy to duplicate blocks of sample content during development.
 
-That's it. See the [demo](http://brm.io/jquery-repeat-demo/), then _view the source_ to see what I mean.
+## Demo ##
 
-## Ok, but why? ##
-
-The main use is duplicating sample content in templates, examples, prototypes and demo pages but without needing a server or maintaining a mess of copy-pasted HTML.
-
-Other uses include mocking UI actions that add content, such as dummying pagination or faking infinite loading content.
-
-It's simple but I do this so often when prototyping front-ends, I wrapped it in a single function.
+See the [demo](http://brm.io/jquery-repeat-demo/).
 
 ## Usage ##
 
@@ -25,7 +19,7 @@ Where:
 
 Every selected element is then cloned `n` times and inserted into to their respective parent(s) after the last element in the selection, or `target` if specified
 
-Returns: the newly generated clones (in case you need to bind them or something)
+Returns: the newly generated clones (for example, if you need to bind them)
 
 ## Example ##
 
